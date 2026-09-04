@@ -924,7 +924,9 @@ function Sunday() {
     <section className="page sunday-page">
       <p className="eyebrow">Weekly space</p>
       <h1>Sunday</h1>
-      <p className="subtle">A slower day for worship, hobbies, and thoughtful preparation.</p>
+      <p className="subtle">
+        A slower day for worship, hobbies, and thoughtful preparation.
+      </p>
       <div className="hobby-panel">
         <p className="eyebrow">Hobbies</p>
         <ul className="hobby-list">
