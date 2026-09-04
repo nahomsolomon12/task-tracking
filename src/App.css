@@ -356,6 +356,28 @@ small {
 .framework-tasks li + li {
   margin-top: 4px;
 }
+.sunday-page {
+  max-width: 900px;
+}
+.hobby-panel {
+  background: var(--white);
+  border-left: 3px solid var(--coral);
+  margin-top: 52px;
+  padding: 30px 36px;
+}
+.hobby-panel .eyebrow {
+  margin-bottom: 20px;
+}
+.hobby-list {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.8;
+}
+.hobby-list li + li {
+  margin-top: 8px;
+}
 .week-page {
   max-width: 1180px;
 }

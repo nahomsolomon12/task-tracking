@@ -238,6 +238,7 @@ function App() {
           {[
             ["week", "Week"],
             ["framework", "6-Day Framework"],
+            ["sunday", "Sunday"],
             ["goals", "Goals"],
             ["archive", "Archive"],
             ["settings", "Settings"],
@@ -435,6 +436,7 @@ function App() {
         )}
         {page === "goals" && <Goals />}
         {page === "framework" && <SixDayFramework />}
+        {page === "sunday" && <Sunday />}
         {page === "archive" && (
           <Archive
             history={state.history || []}
@@ -905,6 +907,31 @@ function SixDayFramework() {
             ))}
           </tbody>
         </table>
+      </div>
+    </section>
+  );
+}
+
+function Sunday() {
+  const hobbies = [
+    "Church liturgical services",
+    "ATG",
+    "Ethiopian Proverbs Project",
+    "(Future) Theological or ATG Coaching Prep",
+  ];
+
+  return (
+    <section className="page sunday-page">
+      <p className="eyebrow">Weekly space</p>
+      <h1>Sunday</h1>
+      <p className="subtle">A slower day for worship, hobbies, and thoughtful preparation.</p>
+      <div className="hobby-panel">
+        <p className="eyebrow">Hobbies</p>
+        <ul className="hobby-list">
+          {hobbies.map((hobby) => (
+            <li key={hobby}>{hobby}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );
