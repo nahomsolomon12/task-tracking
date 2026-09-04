@@ -298,6 +298,64 @@ small {
   max-width: 900px;
   margin: auto;
 }
+.framework-page {
+  max-width: 1050px;
+}
+.framework-table-wrap {
+  overflow-x: auto;
+  margin-top: 52px;
+  border-top: 1px solid var(--ink);
+}
+.framework-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.framework-table th,
+.framework-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 23px 18px;
+  vertical-align: top;
+}
+.framework-table thead th {
+  color: var(--muted);
+  font: 11px "DM Mono";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.framework-table tbody th {
+  width: 28%;
+  color: var(--green-dark);
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.framework-number {
+  display: inline-block;
+  width: 34px;
+  color: var(--coral);
+  font: 12px "DM Mono";
+  font-weight: 500;
+}
+.framework-table td {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.framework-tasks {
+  color: var(--ink) !important;
+  min-width: 230px;
+}
+.framework-tasks ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.framework-tasks li + li {
+  margin-top: 4px;
+}
 .week-page {
   max-width: 1180px;
 }

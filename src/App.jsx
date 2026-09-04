@@ -237,6 +237,7 @@ function App() {
         <nav>
           {[
             ["week", "Week"],
+            ["framework", "6-Day Framework"],
             ["goals", "Goals"],
             ["archive", "Archive"],
             ["settings", "Settings"],
@@ -433,6 +434,7 @@ function App() {
           </>
         )}
         {page === "goals" && <Goals />}
+        {page === "framework" && <SixDayFramework />}
         {page === "archive" && (
           <Archive
             history={state.history || []}
@@ -821,6 +823,93 @@ function Archive({ history, download, exportAll }) {
     </section>
   );
 }
+
+function SixDayFramework() {
+  const parts = [
+    [
+      "01",
+      "Clock In",
+      "Arrive, orient, and decide what deserves your best attention.",
+      ["Prayer", "Shower", "Brush", "Floss", "Breakfast / coffee"],
+    ],
+    [
+      "02",
+      "Deep Work",
+      "Focused work on the highest-value task, with distractions kept out.",
+      ["BSCS classes (2026-2027)"],
+    ],
+    [
+      "03",
+      "Maintenance Work",
+      "Keep the system moving with admin, communication, and upkeep.",
+      [
+        "Lunch",
+        "Laundry",
+        "Light organization",
+        "Work out",
+        "Games with friends",
+        "Create for some light genuine fun",
+        "Finance",
+      ],
+    ],
+    [
+      "04",
+      "Clock Out",
+      "Close open loops, capture the next step, and end the workday deliberately.",
+      [
+        "Movies",
+        "TV show",
+        "Catch up with romantic partner",
+        "Cook for the next day, or cook once a week for the week (chipotle chicken meal)",
+        "Prayer",
+        "Scripture (liturgical)",
+        "Sleep",
+      ],
+    ],
+  ];
+
+  return (
+    <section className="page framework-page">
+      <p className="eyebrow">Daily operating rhythm</p>
+      <h1>6-day framework (2026-2027)</h1>
+      <p className="subtle">Four deliberate parts to every workday.</p>
+      <div className="framework-table-wrap">
+        <table className="framework-table">
+          <thead>
+            <tr>
+              <th scope="col">Part</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Tasks</th>
+            </tr>
+          </thead>
+          <tbody>
+            {parts.map(([number, name, purpose, tasks]) => (
+              <tr key={name}>
+                <th scope="row">
+                  <span className="framework-number">{number}</span>
+                  {name}
+                </th>
+                <td>{purpose}</td>
+                <td className="framework-tasks">
+                  {tasks.length > 0 ? (
+                    <ul>
+                      {tasks.map((task) => (
+                        <li key={task}>{task}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    "Tasks to be added"
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function Settings({
   googleStatus,
   selectedDocId,
